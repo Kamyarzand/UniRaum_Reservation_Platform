@@ -1,4 +1,0 @@
-# General Dependencies/Temporary Files for the main repository
-node_modules/
-.env
-*.log
