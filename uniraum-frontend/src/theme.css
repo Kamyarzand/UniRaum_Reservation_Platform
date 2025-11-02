@@ -1,0 +1,788 @@
+/* Modern Theme Variables with Gradients */
+:root {
+  /* Light theme colors */
+  --light-bg-primary: #ffffff;
+  --light-bg-secondary: #f8f9fa;
+  --light-bg-tertiary: #e9ecef;
+  --light-text-primary: #212529;
+  --light-text-secondary: #495057;
+  --light-text-tertiary: #6c757d;
+  --light-accent-primary: #4361ee;
+  --light-accent-secondary: #3a0ca3;
+  --light-accent-tertiary: #7209b7;
+  --light-success: #2ec4b6;
+  --light-warning: #ff9f1c;
+  --light-danger: #e71d36;
+  --light-border: rgba(0, 0, 0, 0.125);
+  --light-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  
+  /* Dark theme colors */
+  --dark-bg-primary: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --dark-bg-tertiary: #2d2d2d;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #e0e0e0;
+  --dark-text-tertiary: #b0b0b0;
+  --dark-accent-primary: #4cc9f0;
+  --dark-accent-secondary: #4895ef;
+  --dark-accent-tertiary: #4361ee;
+  --dark-success: #2ec4b6;
+  --dark-warning: #ff9f1c;
+  --dark-danger: #e71d36;
+  --dark-border: rgba(255, 255, 255, 0.2);
+  --dark-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  
+  /* Gradients */
+  --gradient-blue: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  --gradient-purple: linear-gradient(135deg, #7209b7 0%, #560bad 100%);
+  --gradient-green: linear-gradient(135deg, #2ec4b6 0%, #22577a 100%);
+  --gradient-orange: linear-gradient(135deg, #ff9f1c 0%, #f77f00 100%);
+  --gradient-red: linear-gradient(135deg, #e71d36 0%, #c1121f 100%);
+  --gradient-dark: linear-gradient(135deg, #121212 0%, #2d2d2d 100%);
+  
+  /* Button Gradients */
+  --button-gradient-light: linear-gradient(135deg, #4cc9f0 0%, #4361ee 100%);
+  --button-gradient-dark: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* Animations */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Apply theme to elements */
+.light-theme {
+  --bg-primary: var(--light-bg-primary);
+  --bg-secondary: var(--light-bg-secondary);
+  --bg-tertiary: var(--light-bg-tertiary);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --text-tertiary: var(--light-text-tertiary);
+  --accent-primary: var(--light-accent-primary);
+  --accent-secondary: var(--light-accent-secondary);
+  --accent-tertiary: var(--light-accent-tertiary);
+  --success: var(--light-success);
+  --warning: var(--light-warning);
+  --danger: var(--light-danger);
+  --border: var(--light-border);
+  --card-shadow: var(--light-card-shadow);
+  --button-gradient: var(--button-gradient-dark);
+}
+
+.dark-theme {
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --bg-tertiary: var(--dark-bg-tertiary);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --text-tertiary: var(--dark-text-tertiary);
+  --accent-primary: var(--dark-accent-primary);
+  --accent-secondary: var(--dark-accent-secondary);
+  --accent-tertiary: var(--dark-accent-tertiary);
+  --success: var(--dark-success);
+  --warning: var(--dark-warning);
+  --danger: var(--dark-danger);
+  --border: var(--dark-border);
+  --card-shadow: var(--dark-card-shadow);
+  --button-gradient: var(--button-gradient-light);
+}
+
+/* Basic theme styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+a {
+  color: var(--accent-primary);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Modern UI Components */
+
+/* Modern Card */
+.modern-card {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Gradient Cards */
+.gradient-card {
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gradient-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gradient-card.blue {
+  background: var(--gradient-blue);
+}
+
+.gradient-card.purple {
+  background: var(--gradient-purple);
+}
+
+.gradient-card.green {
+  background: var(--gradient-green);
+}
+
+.gradient-card.orange {
+  background: var(--gradient-orange);
+}
+
+.gradient-card.red {
+  background: var(--gradient-red);
+}
+
+/* Buttons */
+.btn-modern {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-modern:active {
+  transform: translateY(0);
+}
+
+.btn-gradient {
+  color: white;
+  background: var(--button-gradient);
+}
+
+.btn-gradient:hover {
+  background-size: 150%;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+}
+
+.btn-outline:hover {
+  background: rgba(67, 97, 238, 0.1);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Section with Gradient Background */
+.gradient-section {
+  background: var(--gradient-blue);
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 80%);
+  transform: rotate(30deg);
+}
+
+/* Custom Form Controls */
+.form-control-modern {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.form-control-modern:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+}
+
+.dark-theme .form-control-modern {
+  background-color: var(--dark-bg-tertiary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Navbar styles */
+.navbar-modern {
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-normal);
+}
+
+.dark-theme .navbar-modern {
+  background: var(--dark-bg-secondary);
+}
+
+.navbar-gradient {
+  background: var(--gradient-blue);
+  color: white;
+}
+
+/* Footer styles */
+.footer-modern {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.dark-theme .footer-modern {
+  background-color: var(--dark-bg-secondary);
+}
+
+.footer-gradient {
+  background: var(--gradient-dark);
+  color: white;
+}
+
+/* Dark theme specific overrides */
+.dark-theme .modern-card,
+.dark-theme .dashboard-card,
+.dark-theme .feature-card,
+.dark-theme .step-card,
+.dark-theme .stat-card {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .room-card {
+  background-color: var(--dark-bg-secondary);
+}
+
+.dark-theme .room-name,
+.dark-theme .booking-room {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .room-location, 
+.dark-theme .room-capacity,
+.dark-theme .booking-time {
+  color: var(--dark-text-secondary);
+}
+
+.dark-theme .why-use-uniraum h2 {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .navbar-brand,
+.dark-theme .nav-link {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.dark-theme .footer-modern {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-secondary);
+}
+
+.dark-theme .card-header {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .alert-info {
+  background-color: rgba(75, 149, 239, 0.2);
+  color: var(--dark-text-primary);
+  border-color: var(--dark-accent-secondary);
+}
+
+.dark-theme .alert-success {
+  background-color: rgba(46, 196, 182, 0.2);
+  color: var(--dark-text-primary);
+  border-color: var(--dark-success);
+}
+
+.dark-theme .alert-danger {
+  background-color: rgba(231, 29, 54, 0.2);
+  color: var(--dark-text-primary);
+  border-color: var(--dark-danger);
+}
+
+/* اضافه‌کردن استایل‌های جدید برای فرم‌ها و کارت‌ها در حالت تاریک */
+.dark-theme .card {
+  background-color: var(--dark-bg-secondary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .form-control {
+  background-color: var(--dark-bg-tertiary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .form-label {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .form-text {
+  color: var(--dark-text-tertiary);
+}
+
+.dark-theme .card-body {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .btn-primary {
+  background-color: var(--dark-accent-primary);
+  border-color: var(--dark-accent-primary);
+}
+
+.dark-theme .btn-primary:hover {
+  background-color: var(--dark-accent-secondary);
+  border-color: var(--dark-accent-secondary);
+}
+
+.dark-theme .btn-outline-primary {
+  color: var(--dark-accent-primary);
+  border-color: var(--dark-accent-primary);
+}
+
+.dark-theme .btn-outline-primary:hover {
+  background-color: var(--dark-accent-primary);
+  color: white;
+}
+
+/* استایل برای دکمه‌های Get Started و Sign Up Now */
+.dark-theme .hero-buttons .btn {
+  color: white;
+}
+
+.dark-theme .hero-buttons .btn-outline {
+  color: white;
+  border-color: white;
+}
+
+.dark-theme .hero-buttons .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .cta-section .btn-gradient {
+  color: white;
+}
+
+/* استایل‌های مربوط به Room Details */
+.dark-theme .room-details {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .room-schedule {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+/* استایل‌های خاص برای صفحه لاگین و ثبت‌نام */
+.dark-theme .auth-form {
+  background-color: var(--dark-bg-secondary);
+  border-color: var(--dark-border);
+}
+
+/* استایل‌های متفرقه */
+.dark-theme .table {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .dropdown-menu {
+  background-color: var(--dark-bg-secondary);
+  border-color: var(--dark-border);
+}
+
+.dark-theme .dropdown-item {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .dropdown-item:hover {
+  background-color: var(--dark-bg-tertiary);
+}
+
+/* استایل برای پرینت تقویم و فرم‌های زمان */
+.dark-theme input[type="date"],
+.dark-theme input[type="time"],
+.dark-theme textarea {
+  background-color: var(--dark-bg-tertiary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+/* بهبود استایل دکمه‌های "View Details" */
+.dark-theme .btn-room {
+  background-color: var(--dark-accent-primary);
+  color: white;
+}
+
+.dark-theme .btn-room:hover {
+  background-color: var(--dark-accent-secondary);
+}
+
+/* استایل‌های جدید برای رفع مشکلات خوانایی */
+.light-theme .room-card .btn-room,
+.light-theme .btn-gradient,
+.light-theme .hero-buttons .btn-modern,
+.light-theme .cta-section .btn-gradient,
+.light-theme .quick-actions .btn {
+  background: var(--button-gradient-dark);
+  color: white;
+  border: none;
+}
+
+/* بهبود استایل برای آدرس‌های کلاس در حالت تاریک */
+.dark-theme a {
+  color: var(--dark-accent-primary);
+}
+
+.dark-theme .room-card a {
+  color: var(--dark-accent-primary);
+}
+
+.dark-theme .view-all {
+  color: var(--dark-accent-primary);
+}
+
+/* استایل برای تگ آدرس کلاس‌ها */
+.dark-theme .room-building,
+.dark-theme .room-floor {
+  color: #4cc9f0 !important;
+}
+
+/* اصلاح فرم‌ها و سلکت‌ها در حالت تاریک */
+.dark-theme select, 
+.dark-theme option,
+.dark-theme input,
+.dark-theme textarea {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+  border-color: var(--dark-border);
+}
+
+.dark-theme select option {
+  background-color: var(--dark-bg-secondary);
+}
+
+/* اصلاح رنگ Room Details و Room Schedule */
+.dark-theme .card,
+.dark-theme .card-header,
+.dark-theme .card-body {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+/* استایل برای Room Details در حالت تاریک */
+.room-details {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.dark-theme .room-details {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .room-details dl {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+/* استایل برای آدرس کلاس در لیست کلاس‌ها */
+.technical-arts-building {
+  color: #4cc9f0;
+}
+
+.dark-theme .technical-arts-building {
+  color: #4cc9f0;
+}
+
+/* بهبود کنتراست رنگ نوشته‌ها روی دکمه‌ها در حالت روشن */
+.light-theme .btn-primary,
+.light-theme .btn-room,
+.light-theme .btn-gradient {
+  color: white;
+  font-weight: 600;
+}
+
+/* بهبود استایل برای جدول روم‌ها در حالت تاریک */
+.dark-theme table,
+.dark-theme th,
+.dark-theme td {
+  color: var(--dark-text-primary);
+}
+
+.dark-theme tbody {
+  background-color: var(--dark-bg-tertiary);
+}
+
+/* اصلاح رنگ پس‌زمینه Room Details */
+.dark-theme .room-details div,
+.dark-theme .room-schedule div {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+.dark-theme .room-details div div,
+.dark-theme .room-schedule div div {
+  background-color: var(--dark-bg-secondary);
+}
+
+.dark-theme .room-details dl div {
+  background-color: var(--dark-bg-tertiary);
+}
+
+/* بهبود استایل دکمه‌های View Details */
+.btn-view-details {
+  background: var(--button-gradient);
+  color: white !important;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-view-details:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.dark-theme .btn-view-details {
+  background: var(--button-gradient-light);
+}
+
+.light-theme .btn-view-details {
+  background: var(--button-gradient-dark);
+}
+
+/* اصلاح رنگ عنوان‌های فرم رزرو */
+.dark-theme .book-form label,
+.dark-theme .book-form h4 {
+  color: var(--dark-text-primary);
+}
+
+/* اصلاح رنگ پس‌زمینه فیلترها */
+.dark-theme .filter-form,
+.dark-theme .filter-form div {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+}
+
+/* استایل عمومی برای کارت‌ها در لیست کلاس‌ها */
+.room-list-card {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dark-theme .room-list-card {
+  background-color: var(--dark-bg-secondary);
+}
+
+.room-list-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.dark-theme .room-list-card h3 {
+  color: var(--dark-text-primary);
+}
+
+.room-list-card p {
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.dark-theme .room-list-card p {
+  color: var(--dark-text-secondary);
+}
+
+.room-list-card .building-info {
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.dark-theme .room-list-card .building-info {
+  color: var(--dark-accent-primary);
+}
+
+.room-list-card .view-details-btn {
+  margin-top: auto;
+  align-self: stretch;
+}
+
+/* زیبا‌سازی فرم رزرو */
+.booking-form {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.dark-theme .booking-form {
+  background-color: var(--dark-bg-secondary);
+}
+
+.booking-form .form-header {
+  background-color: var(--accent-primary);
+  color: white;
+  padding: 15px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.dark-theme .booking-form .form-header {
+  background-color: var(--dark-accent-primary);
+}
+
+.booking-form label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.dark-theme .booking-form label {
+  color: var(--dark-text-primary);
+}
+
+.booking-form .form-control {
+  border-radius: 8px;
+}
+
+.booking-form .btn-book {
+  background: var(--gradient-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.booking-form .btn-book:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+/* Scroll to top button */
+.scroll-to-top-btn {
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+  transform: translateY(-5px);
+  opacity: 1 !important;
+}
+
+/* Button styles for home page */
+.btn-primary {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.btn-outline-light {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.dark-theme .btn-primary {
+  background-color: var(--dark-accent-primary);
+  border-color: var(--dark-accent-primary);
+}

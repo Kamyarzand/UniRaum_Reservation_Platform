@@ -1,0 +1,87 @@
+/* RoomsList.css */
+
+/* استایل برای آدرس کلاس‌ها */
+.building-address {
+  color: #4cc9f0 !important; /* رنگ آبی روشن برای بهبود خوانایی در هر دو حالت */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* استایل برای دکمه View Details */
+.btn-view-details {
+  background: var(--button-gradient, linear-gradient(135deg, #4cc9f0 0%, #4361ee 100%)) !important;
+  color: white !important;
+  transition: all 0.3s;
+}
+
+.btn-view-details:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل‌های مربوط به Room Card */
+.room-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .room-card {
+  background-color: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .room-card .card-title {
+  color: white;
+}
+
+.dark-theme .card-text {
+  color: #e0e0e0;
+}
+
+.dark-theme .card-text strong {
+  color: white;
+}
+
+/* استایل‌های Select در حالت تاریک */
+.dark-theme select,
+.dark-theme input {
+  background-color: #2d2d2d !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-theme select option {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+/* استایل‌های کارت‌ها در حالت تاریک */
+.dark-theme .card {
+  background-color: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .card-body {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-theme .card-footer {
+  background-color: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .form-label,
+.dark-theme .card-title {
+  color: white;
+}
+
+.dark-theme .form-check-label {
+  color: #e0e0e0;
+}

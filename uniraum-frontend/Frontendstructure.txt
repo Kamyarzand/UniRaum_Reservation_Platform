@@ -1,0 +1,61 @@
+uniraum-frontend/
+├── public/
+│   ├── index.html         # فایل HTML اصلی
+│   └── ...
+├── src/
+│   ├── components/        # کامپوننت‌های قابل استفاده مجدد
+│   │   ├── common/        # کامپوننت‌های عمومی
+│   │   │   ├── TimePicker.js
+│   │   │   ├── TimePicker.css
+│   │   │   ├── PrivateRoute.js
+│   │   │   ├── ScrollButton.css
+│   │   │   └── ScrollButton.js
+│   │   ├── layout/        # کامپوننت‌های چیدمان
+│   │   │   ├── Footer.js  # پاورقی
+│   │   │   ├── Layout.js  # چیدمان کلی
+│   │   │   └── Navbar.js  # نوار ناوبری
+│   │   ├── auth/          # کامپوننت‌های مربوط به احراز هویت
+│   │   ├── rooms/         # کامپوننت‌های مربوط به اتاق‌ها
+│   │   │ 
+│   │   └── bookings/      # کامپوننت‌های مربوط به رزرو‌ها
+│   ├── pages/             # صفحات اصلی برنامه
+│   │   ├── DamageReport.js
+│   │   ├── DamageReport.css
+│   │   ├── Home.js        # صفحه خانه
+│   │   ├── Home.css        
+│   │   ├── auth/          # صفحات احراز هویت
+│   │   │   ├── Login.js   # صفحه ورود
+│   │   │   └── Register.js # صفحه ثبت‌نام
+│   │   ├── rooms/         
+│   │   │   ├── RoomsList.js  
+│   │   │   ├── RoomsList.css  
+│   │   │   ├── RoomDetails.js 
+│   │   │   └── RoomDetails.css
+│   │   ├── bookings/      # صفحات مربوط به رزرو‌ها
+│   │   │   └── BookingsList.js # لیست رزروها
+│   │   ├── profile/       # صفحات مربوط به پروفایل کاربر
+│   │   │   └── Profile.js # صفحه پروفایل
+│   │   └── admin/         
+│   │       ├── ManageBookings.js
+│   │       ├── AdminDamageReports.js
+│   │       ├── AdminDamageReports.css  
+│   │       ├── ManageRooms.js 
+│   │       ├── ManageUsers.js 
+│   │       └── admin.css
+│   ├── services/          # سرویس‌های ارتباط با API
+│   │   ├── api.js         # تنظیمات پایه API
+│   │   ├── auth.service.js # سرویس احراز هویت
+│   │   ├── user.service.js # سرویس کاربران
+│   │   ├── room.service.js # سرویس اتاق‌ها
+│   │   └── booking.service.js # سرویس رزروها
+│   ├── utils/             # توابع کمکی
+│   │   ├── auth-context.js # کانتکست احراز هویت
+│   │	└──theme-context.js
+│   ├── App.js             # کامپوننت اصلی برنامه
+│   ├── App.css            # استایل‌های اصلی
+│   ├── index.js           # نقطه ورود برنامه
+│   ├── index.css          # استایل‌های عمومی
+│   ├── theme.css
+│   └─── assets/ 
+├── package.json           # وابستگی‌های پروژه
+└── package-lock.json

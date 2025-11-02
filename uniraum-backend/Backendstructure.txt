@@ -1,0 +1,36 @@
+├── 📁 config
+│   ├── auth.config.js
+│   └── firebase.config.js
+│
+├── 📁 controllers
+│   ├── auth.controller.js
+│   ├── booking.controller.js
+│   ├── room.controller.js
+│   ├── user.controller.js
+│   └── damage-report.controller.js
+│
+├── 📁 middlewares
+│   ├── auth.jwt.js
+│   ├── index.js
+│   └── verifySignUp.js
+│
+├── 📁 models
+│   ├── firebase.config.js
+│   └── firebase-models.js
+│
+├── 📁 routes
+│   ├── auth.routes.js
+│   ├── booking.routes.js
+│   ├── room.routes.js
+│   ├── user.routes.js
+│   └── damage-report.routes.js
+│
+├── 📁 utils
+│   ├── firebase-models.js
+│   └── init-data.js
+│
+├── 📄 .env
+├── 📄 package.json
+├── 📄 package-lock.json
+├── 📄 server.js
+└── 📄 serviceAccountKey.json
